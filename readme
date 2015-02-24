@@ -1,0 +1,4 @@
+# sudo cp httpd-xampp.conf /opt/lampp/etc/extra/httpd-xampp.conf
+
+# ln -s /opt/lampp/lampp ~/bin/lampp
+
