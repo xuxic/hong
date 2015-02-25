@@ -8,7 +8,24 @@
 </head>
 <body>
 
-      <h1>Hello, world!</h1>
+	<h1>Hello, world!</h1>
+	<ul class="nav nav-pills">
+	   <li class="active"><a href="#">Home</a></li>
+	   <li><a href="#">SVN</a></li>
+	   <li><a href="#">iOS</a></li>
+	   <li><a href="#">VB.Net</a></li>
+	   <li><a href="#">Java</a></li>
+	   <li><a href="#">PHP</a></li>
+	</ul>
+	
+<script>
+$(document).ready(function(){
+  $("li").click(function(){
+    $("li").removeClass("active");
+    $(this).addClass("active");
+  });
+});
+</script>
 
 </body>
 </html>		
