@@ -2,7 +2,7 @@
 <html>
 <head>
    <title>Demo</title>
-   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
    
 	{% load staticfiles %}
@@ -15,6 +15,7 @@
    
 </head>
 <body>
+	<div class="container">
 	<div class="row">
 		<div class="col-xs-4 col-xs-offset-4">
 			<ul class="nav nav-pills">
@@ -91,13 +92,14 @@
 	   </div>
 	</div>
 	<div class="row" style="background-color: grey;">
-		<div class="well" align="center">
-			<video width="320" height="240" align="center" controls>
+		<div class="col-sm-6 col-sm-offset-3">
+			<video class="well" width="100%" height="auto" controls>
 			  <source src="http://www.w3cschool.cc/try/demo_source/movie.mp4" type="video/mp4">
 			  <source src="http://www.w3cschool.cc/try/demo_source/movie.ogg" type="video/ogg">
 			您的浏览器不支持Video标签。
 			</video>
 	 	</div>
+ 	</div>
  	</div>
 </body>
 </html>		
