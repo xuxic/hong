@@ -13,10 +13,22 @@ $(document).ready(function(){
 		$("li").removeClass("active");
 		$(this).addClass("active");
 	});
-	$("button").click(function(){
+	$("#toupiaobtn").click(function(){
 	  $.post("/main/vote",{},
 	  function(data,status){
 		  $("#toupiao1").text(data);
 	  });
-  });
+	});
+	$("#sendmsg").click(function(){
+		console.log("send msg")
+		var msg = {"email":$("#email").val(),"content":$("#content").val()}
+		console.log(msg)
+		$.post("/main/mmmm",JSON.stringify(msg),
+		function(data,status){
+			console.log(data)
+			var row = "<td>"+data.email+"</td>"+"<td>"+data.content+"</td>"+"<td>"+data.pub_date+"</td>"
+			row = "<tr>"+row+"</tr>"
+			$("#message").prepend(row);
+		}, "json");
+	})
 });

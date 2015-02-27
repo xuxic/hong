@@ -74,7 +74,7 @@
 	         <img src="{% static 'main/blue.jpg' %}"
 	         alt="通用的占位符缩略图">
 	      </a>
-	      <button class="btn btn-danger" type="submit">投票</button>
+	      <button id="toupiaobtn" class="btn btn-danger" type="submit">投票</button>
 	      <div id="toupiao1"></div>
 	   </div>
 	   <div class="col-sm-6 col-md-3">
@@ -106,7 +106,21 @@
 	 	</div>
  	</div>
  	<div class="row">
-		<table class="table">
+ 		<h1>请留言</h1>
+		   <div class="form-group">
+		      <label class="sr-only" for="name">名称</label>
+		      <input type="text" class="form-control" id="email" 
+		         placeholder="请输入邮箱地址">
+		   </div>
+		  <div class="form-group">
+			<label class="sr-only" for="content">文本框</label>
+			<textarea class="form-control" rows="3" id="content"
+				placeholder="请输入留言内容"></textarea>
+		  </div>
+		  <button id="sendmsg" class="btn btn-default">提交</button>
+	</div>
+	<div class="row">
+		<table class="table table-responsive">
 		   <h1>以下为全部留言</h1>
 		   <thead>
 		      <tr>
@@ -128,7 +142,7 @@
 		      </tr>
 		   </tbody>
 		</table>
- 	</div>
+	</div>
  	</div>
 </body>
 </html>		
