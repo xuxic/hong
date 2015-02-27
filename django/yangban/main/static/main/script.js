@@ -1,6 +1,13 @@
 $(document).ready(function(){
+	$("#toupiao1").load("/main/vote");
   $("li").click(function(){
     $("li").removeClass("active");
     $(this).addClass("active");
+  });
+  $("button").click(function(){
+	  $.post("/main/vote",{},
+	  function(data,status){
+		  $("#toupiao1").text(data);
+	  });
   });
 });
