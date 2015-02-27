@@ -3,7 +3,6 @@ from django.db import models
 # Create your models here.
 from django.db import models
 
-
 class Message(models.Model):
     email = models.CharField(max_length=32)
     content = models.CharField(max_length=200)
